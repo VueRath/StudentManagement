@@ -9,4 +9,20 @@ class Section extends Model
 {
     /** @use HasFactory<\Database\Factories\SectionFactory> */
     use HasFactory;
+
+    protected $fillable = 
+    [
+        'class_id',
+        'name'
+    ];
+
+    public function class()
+    {
+        return $this->belongsTo(Classes::class, 'class_id');
+    }
+
+    public function student()
+    {
+        return $this->hasMany(Student::class);
+    }
 }
