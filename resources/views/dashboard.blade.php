@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
         <div>
-            @livewire('student.index')
+            @livewire('students.index')
         </div>
     </div>
 </x-app-layout>
